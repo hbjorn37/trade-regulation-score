@@ -1,0 +1,31 @@
+[project]
+name = "trade-regulation-score"
+version = "1.0.0"
+description = "Reproducible pipeline for supply-shock import price forecasting with LLM-derived Trade Regulation Scores."
+requires-python = ">=3.12"
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = [
+    "pyyaml>=6.0",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "scikit-learn>=1.5",
+    "statsmodels>=0.14",
+    "lightgbm>=4.3",
+    "ngboost>=0.5",
+    "xgboost>=2.0",
+    "catboost>=1.2",
+    "torch>=2.6",
+    "chronos-forecasting>=1.4",
+]
+
+[project.optional-dependencies]
+lstm = ["tensorflow>=2.18"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trs_pipeline"]

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Trade Regulation Score: Reproducible Supply-Shock Forecasting Pipeline"
+message: "If you use this code, please cite the accompanying thesis."
+type: software
+authors:
+  - family-names: Hwang
+    given-names: Byungjun
+    affiliation: KAIST
+repository-code: "https://github.com/hbjorn37/trade-regulation-score"
+license: MIT
+version: "1.0.0"
+date-released: 2026-06-07
+preferred-citation:
+  type: thesis
+  title: "News-Driven Trade Regulation Score and Supply-Shock Forecasting for Korean Imports"
+  authors:
+    - family-names: Hwang
+      given-names: Byungjun
+  year: 2026
+  institution:
+    name: Korea Advanced Institute of Science and Technology (KAIST)
+  thesis-type: "Master's thesis"
