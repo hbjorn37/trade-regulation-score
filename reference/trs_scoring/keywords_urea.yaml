@@ -1,0 +1,43 @@
+# Example keyword config for the urea solution case study.
+# Replace these with the keyword set appropriate for your news corpus and
+# language. The thesis used Korean-language keywords against Naver News.
+
+target_country:
+  - China
+  - Beijing
+
+risk:
+  - export inspection
+  - export control
+  - export quota
+  - customs tightening
+  - urea shortage
+  - supply disruption
+  - panic buying
+  - production halt
+  - environmental regulation
+
+positive:
+  - cooperation
+  - supply stabilization
+  - regulation lifted
+  - domestic production
+
+prompt_template: |
+  Evaluate the risk of a Chinese export restriction affecting urea supply
+  to Korea on an integer scale of 0 to 999.
+
+  Date: {date}
+  News snippet: {text}
+
+  Scoring guide:
+    800-950: export inspection in force, supply cutoff, panic buying
+    600-750: tightening clearly imminent, severe disruption expected
+    400-550: regulation discussed as possible, tensions escalating
+    150-300: routine China-Korea trade or economic news
+    50-120:  improvement, cooperation strengthening
+    20-80:   unrelated to China or urea
+
+  Keyword counts: risk={risk_n}, country={country_n}, positive={positive_n}
+
+  Return exactly one integer in [0, 999]:

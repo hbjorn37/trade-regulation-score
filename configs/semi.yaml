@@ -1,0 +1,27 @@
+name: semi
+description: Semiconductor materials (Japan export restriction)
+hs_code: "3707901010"
+origin_country: JP
+shock_date: "2019-07-01"
+shock_week: "2019_27"
+train_end_week: "2019_26"
+test_start_week: "2019_27"
+data_start_week: "2017_01"
+data_end_week: "2022_38"
+country_mention_label: Japan Mention Articles
+item_title: Semiconductor Materials
+shock_label: "Japan Export Restriction (2019.7.1)"
+shock_weeks:
+  - "2019_27"
+  - "2019_28"
+  - "2019_29"
+  - "2019_30"
+  - "2019_31"
+  - "2019_32"
+  - "2019_33"
+  - "2019_34"
+  - "2019_35"
+
+files:
+  import_csv: import_daily_2017_2022.csv
+  trs: trs_final_2017_2022.csv

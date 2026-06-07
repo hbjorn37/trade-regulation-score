@@ -1,0 +1,45 @@
+# Example keyword config for the semiconductor materials case study.
+# Replace these with the keyword set appropriate for your news corpus and
+# language. The thesis used Korean-language keywords against Naver News.
+
+target_country:
+  - Japan
+  - Tokyo
+
+risk:
+  - export restriction
+  - export control
+  - white list
+  - strategic material
+  - export ban
+  - supply disruption
+  - supply shortage
+  - photoresist regulation
+  - hydrogen fluoride regulation
+  - production halt
+  - trade retaliation
+
+positive:
+  - cooperation
+  - normalization
+  - regulation lifted
+  - supply stabilization
+
+prompt_template: |
+  Evaluate the risk of a Japanese export restriction on semiconductor
+  materials on an integer scale of 0 to 999.
+
+  Date: {date}
+  News snippet: {text}
+
+  Scoring guide:
+    800-950: export restriction announced or in force, white list removal, supply cutoff
+    600-750: regulation tightening clearly imminent, severe disruption expected
+    400-550: regulation discussed as possible, trade tensions escalating
+    150-300: routine Japan-Korea trade or economic news
+    50-120:  improvement in relations, cooperation strengthening
+    20-80:   unrelated to Japan or semiconductors
+
+  Keyword counts: risk={risk_n}, country={country_n}, positive={positive_n}
+
+  Return exactly one integer in [0, 999]:

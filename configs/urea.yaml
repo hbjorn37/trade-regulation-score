@@ -1,0 +1,27 @@
+name: urea
+description: Urea solution (China export inspection tightening)
+hs_code: "3102109000"
+origin_country: CN
+shock_date: "2021-10-11"
+shock_week: "2021_40"
+train_end_week: "2021_39"
+test_start_week: "2021_40"
+data_start_week: "2017_01"
+data_end_week: "2022_38"
+country_mention_label: China Mention Articles
+item_title: Urea Solution
+shock_label: "China Export Inspection Tightening (2021.10.11)"
+shock_weeks:
+  - "2021_40"
+  - "2021_41"
+  - "2021_42"
+  - "2021_43"
+  - "2021_44"
+  - "2021_45"
+  - "2021_46"
+  - "2021_47"
+  - "2021_48"
+
+files:
+  import_csv: import_daily_2017_2022.csv
+  trs: trs_final_2017_2022.csv
